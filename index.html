@@ -181,8 +181,29 @@ section { margin-bottom: 1.35rem; }
 .edu-school { font-size: .78rem; color: #4A78B0; margin-bottom: .05rem; }
 .edu-date { font-size: .73rem; color: #888; }
 
+/* ── Mobile contact (screen only, shown on small screens) ── */
+.contact-mobile { display: none; }
+
+@media screen and (max-width: 600px) {
+  .hd-right { display: none; }
+
+  .contact-mobile {
+    display: block;
+    margin-top: 1.6rem;
+    padding-top: 1.1rem;
+    border-top: 1.5px solid #1C3F6E;
+  }
+  .contact-mobile .sec-title { margin-bottom: .6rem; }
+  .contact-mobile .contact-item {
+    text-align: left;
+    font-size: .82rem;
+    line-height: 2;
+  }
+}
+
 /* ── Print ── */
 @media print {
+  .contact-mobile { display: none !important; }
   html { font-size: 9.5pt; }
   body { background: white; }
   .print-btn { display: none; }
@@ -390,6 +411,15 @@ section { margin-bottom: 1.35rem; }
     </section>
 
   </div>
+
+  <!-- CONTACT (mobile only) -->
+  <section class="contact-mobile">
+    <h2 class="sec-title">Contact</h2>
+    <span class="contact-item">Halfweg, Netherlands(Amsterdam area)</span>
+    <span class="contact-item">+31 6 84 61 70 74</span>
+    <span class="contact-item"><a href="mailto:calzedoni@gmail.com">calzedoni@gmail.com</a></span>
+    <span class="contact-item"><a href="https://linkedin.com/in/elenakhaletskaya/">linkedin.com/in/elenakhaletskaya</a></span>
+  </section>
 
 </div>
 
